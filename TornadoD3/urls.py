@@ -31,5 +31,6 @@ urlList  = [
     # (r'/user/tinyconsumption', admin_handler.tinyconsumption_Handler),
     (r'/user/tinyconsumption[/]?(\d+)?', admin_handler.tinyconsumption_Handler),
     (r'/user/tinyconsumption/(page)', admin_handler.tinyconsumption_Handler,None),
+    (r'/suggest', index_handler.suggest_Handler),
 
 ]

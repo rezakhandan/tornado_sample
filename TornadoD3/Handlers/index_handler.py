@@ -240,6 +240,21 @@ class ForgetpassHandler(TornadoRequestBase):
     def get(self):
         self.render('home/forget_pass.html')
 
+class suggest_Handler(TornadoRequestBase):
+    def get(self):
+        self.render('home/suggest.html')
+
+    def post(self, *args, **kwargs):
+        name = self.get_argument('name')
+        email = self.get_argument('email')
+        message = self.get_argument('message')
+        Suggest = suggest.create(
+            name=name,
+            email=email,
+            message=message
+        )
+
+
 
 
 
